@@ -1,9 +1,11 @@
 # VarQQA
-## grover/ 
-This folder contains the single root search algorithm learned by VarQQA.
 
-## frac_grover/ 
-This folder contains the single root search algorithm learned by VarQQA with fractional query oracle.
+
+## EXACT/
+Quantum query algorithm for $\mathrm{EXACT}_{k,l}^n$ learned by VarQQA
+
+## grover/ 
+Single root search algorithm learned by VarQQA with discrete and fractional oracle.
 
 ## hamming_weight_modulo/
-This folder contains the hamming weight modulo function learned by VarQQA.
+Quantum query algorithm  for Hamming weight modulo function learned by VarQQA.
