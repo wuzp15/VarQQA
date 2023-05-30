@@ -18,4 +18,4 @@ conda create -y -n cuda118
 conda install -y -n cuda118 -c conda-forge pytorch ipython matplotlib scipy tqdm cvxpy
 conda activate cuda118
 ```
-Run the corresponding python file in the `\VarQQA` for the VarQQA algorithm.
+Run the corresponding python file in the `/VarQQA` for the VarQQA algorithm.
