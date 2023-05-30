@@ -5,7 +5,7 @@ This is the repository for the paper "Variational learning algorithms for quantu
 
 Currently, this repo contains the following files:
 
-1. `\VarQQA` folder : the main file for the paper, contains the implementation of the variational learning algorithms for quantum query complexity.
+1. `/VarQQA` folder : the main file for the paper, contains the implementation of the variational learning algorithms for quantum query complexity.
 2.  `/sdp` folder: contains the SDP solver used in the paper.
 3.  `/data` folder: contains the quantum query algorithm found the by VarQQA in this paper.It contains three subfolders 
     1.  `/data/grover`: contains the data for Grover search
