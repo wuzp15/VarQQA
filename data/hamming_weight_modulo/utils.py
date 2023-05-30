@@ -28,9 +28,13 @@ def exact_map(num_bit,ind_list):
     return ret
 
 def mes_matrix(partition,weight):
-    ## partition is the partition of accessible space.
-    # If dim_acc=5.partition can be[1,2,2]
-    ## weight is a list of hamming modulo. can be computed by calling hamming_map(n,m)
+    '''
+    params:
+        partition: list of int. partition of accessible space
+        weight: list of int. hamming modulo for each input
+    return:
+        return the measurement matrix
+    '''
     dim_bit =len(weight)
     ind = np.cumsum([0,*partition])
     mes = np.zeros((dim_bit,ind[-1]),dtype=np.complex128)
@@ -40,10 +44,14 @@ def mes_matrix(partition,weight):
 
 
 def oracle(num_bit,dim_query,dim_work):
-    # construct the orcale for all x
-    # num_bit : number of bit for boolean function
-    # dim_query : dimension of query register
-    # dim_work : dimension of working memory register
+    '''
+        params:
+            num_bit: number of bit for boolean function
+            dim_query: dimension of query register
+            dim_work: dimension of working memory register
+        return:
+            return the oracle matrix 
+    '''
     tmp0 = np.arange(2**num_bit, dtype=np.uint64).reshape(-1,1)
     x_bit = unpackbits(tmp0, axis=-1, count=dim_query, bitorder='l').T
     dim_acc = dim_query * dim_work
@@ -62,6 +70,16 @@ def forward(dim_acc,num_bit,unitary,oracle):
     return state
 
 def record_state(dim_acc,num_bit,unitary,oracle):
+    '''
+        params:     
+            dim_acc: dimension of accesible space
+            num_bit: number of bit for boolean function 
+            unitary: list of unitary matrix
+            oracle: oracle matrix  
+        return:
+            return the list of state after each oracle query
+
+    '''
     state_list=[]
     state = np.zeros([dim_acc,2**num_bit],dtype=np.complex128)
     state[0] = 1

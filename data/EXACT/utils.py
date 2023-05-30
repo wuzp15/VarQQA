@@ -19,9 +19,6 @@ def unpackbits(x,count,axis=-1,bitorder='l'):
     return np.unpackbits(tmp0,count=count,axis=axis, bitorder=bitorder)
 
 def mes_matrix(partition,weight):
-    ## partition is the partition of accessible space.
-    # If dim_acc=5.partition can be[1,2,2]
-    ## weight is a list of hamming modulo. can be computed by calling hamming_map(n,m)
     dim_bit =len(weight)
     ind = np.cumsum([0,*partition])
     mes = np.zeros((dim_bit,ind[-1]),dtype=np.complex128)
