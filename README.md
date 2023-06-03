@@ -1,4 +1,5 @@
 # README
+[![DOI](https://zenodo.org/badge/491751180.svg)](https://zenodo.org/badge/latestdoi/491751180)
 
 This is the repository for the paper "Variational learning algorithms for quantum query complexity". 
 
